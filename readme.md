@@ -2,7 +2,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/language-Java-orange" alt="Language">
-  <img src="https://img.shields.io/github/license/your-username/DSA-with-JAVA" alt="License">
+  <img src="https://img.shields.io/github/license/yadavmangesh07/DSA-with-JAVA" alt="License">
 </p>
 
 Welcome to the DSA with JAVA repository! Here you'll find a collection of well-crafted Java implementations for various Data Structures and Algorithms to help you level up your skills in the realm of computer science.
