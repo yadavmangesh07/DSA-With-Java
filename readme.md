@@ -32,4 +32,8 @@ To get started with this repository, follow these simple steps:
 
 1. Clone the repository to your local machine:
    ```bash
-   git clone https://github.com/your-username/DSA-with-JAVA.git
+   git clone https://github.com/yadavmangesh07/DSA-with-JAVA.git
+## License
+
+
+Feel free to customize this template according to your specific needs and preferences. You can add additional sections, embellishments, or modify the styling as desired.
