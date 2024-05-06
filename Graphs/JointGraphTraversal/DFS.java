@@ -1,43 +1,43 @@
-package Graphs;
+package Graphs.JointGraphTraversal;
 
-import java.util.ArrayList;
+import java.util.*;
 
-public class hasPath {
-    public static class Edge{
+public class DFS {
+    public static class Edge {
+    
         int src,dst,wt;
         public Edge(int s,int d,int w){
-            this.dst=d;
             this.src=s;
+            this.dst=d;
             this.wt=w;
 
         }
     }
-    public static boolean hasPathFunction(ArrayList<Edge>[] graph,boolean visited[],int source  ,int destination){
-        if(source==destination){
-            return true;
-        }
-        visited[source]=true;
-        //check for neighbours
-        for (int i = 0; i < graph[source].size(); i++) {
-            Edge e= graph[source].get(i);
-            
-            if(!visited[e.dst] && hasPathFunction(graph, visited, e.dst, destination)){
-                //if neighbour has the path then return true because you can reach to the neighbour
-                return true;
+    //O(V+E)
+    public static void DepthFirstSearch(ArrayList<Edge>[] graph,int curr, boolean visited[]){
+        
+            visited[curr]=true;
+            System.out.print(curr +" ");
+            //for neighbours of curr
+            for (int i = 0; i < graph[curr].size(); i++) {
+                Edge e=graph[curr].get(i);
+                if(!visited[e.dst]){//check wether the neighbour is not visited 
+                    DepthFirstSearch(graph, e.dst, visited);
+                }
                 
-            }
+             
         }
-        return false;
-    }
+        
 
+    }
     @SuppressWarnings("unchecked")
     public static void main(String[] args) {
         int v=7;
-        ArrayList<Edge> [] graph=new ArrayList[v];
+        ArrayList<Edge>[] graph=new ArrayList[v];
         for (int i = 0; i < graph.length; i++) {
-            graph[i]=new ArrayList<>();
+            graph[i]=new ArrayList<Edge>();
+            
         }
-        boolean visited[]=new boolean[graph.length];
         graph[0].add(new Edge(0, 1, 1));
         graph[0].add(new Edge(0, 2, 1));
         graph[1].add(new Edge(1, 0, 1));
@@ -54,7 +54,8 @@ public class hasPath {
         graph[5].add(new Edge(5, 4, 1));
         graph[5].add(new Edge(5, 6, 1));
         graph[6].add(new Edge(6, 5, 1));
-        System.out.println(hasPathFunction(graph, visited, 0, 6));
+        boolean visited[]=new boolean[graph.length];
+       DepthFirstSearch(graph, 0, visited);
     }
     
 }
