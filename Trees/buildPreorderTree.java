@@ -15,6 +15,7 @@ public class buildPreorderTree {
         static int indx=-1;
         public  Node buildBinaryTree(int []preorder){
             indx++;
+            
             if(preorder[indx]==-1){
                 return null;
             }

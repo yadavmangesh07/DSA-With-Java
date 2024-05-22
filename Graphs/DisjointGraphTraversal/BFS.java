@@ -20,7 +20,7 @@ public class BFS {
             if (!visited[i]) {
                 BFSUtil(graph,visited);
                 
-            }
+            } 
             
         }
     }
