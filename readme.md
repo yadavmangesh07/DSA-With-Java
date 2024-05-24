@@ -21,7 +21,7 @@ This repository contains a comprehensive collection of Data Structures and Algor
 - **Sorting Algorithms**: Bubble sort, merge sort, quicksort, heap sort, and more.
 - **Dynamic Programming**: Fibonacci, knapsack problem, longest common subsequence, and other classic problems.
 - **Greedy Algorithms**: Huffman coding, activity selection, and more.
-- **Backtracking**: N-Queens problem, subset sum problem, and other puzzles.
+- **Backtracking**: N-Queens problem, Sudoku solving, subset sum problem, and other puzzles.
 
 ---
 
