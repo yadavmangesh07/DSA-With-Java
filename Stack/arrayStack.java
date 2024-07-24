@@ -8,11 +8,7 @@ public class arrayStack {
         arrayStack.size=size;
         arrayStack.arr=new int[size];
     }
-    //isEmpty()
-    //isFull()
-    //push()
-    //pop()
-    //peek()
+    
     public  boolean isEmpty(){
         return top==-1?true:false;
     }
