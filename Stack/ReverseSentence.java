@@ -13,6 +13,7 @@ public class ReverseSentence {
             String s=sc.nextLine();
             for(String r:s.split(" ")){
                 st.push(r);
+                
 
             }
             while (!st.isEmpty()) {

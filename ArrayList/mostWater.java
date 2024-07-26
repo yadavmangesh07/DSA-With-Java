@@ -28,6 +28,7 @@ public class mostWater {
         list.add(8);
         list.add(3);
         list.add(7);
+        
       
         pillarIndex(list);
     }
