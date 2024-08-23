@@ -3,9 +3,7 @@ name: contribution-streak-maintainer
 on:
   workflow_dispatch:
   schedule:
-    # For more information on the cron scheduler,
-    # see https://crontab.guru/ or https://crontab.cronhub.io/.
-    # This cron schedule means the action runs every day at midnight UTC.
+    # Runs every day at 22:00 UTC.
     - cron: "0 22 * * *"
 
 permissions:
@@ -14,8 +12,20 @@ permissions:
 jobs:
   contribution-streak-maintainer:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Make a contribution
-        run: npx contribution-streak-maintainer ${{github.repository}} --email=primary-github-email@email.com
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Update streak file with current date
+        run: echo "Last updated on $(date -u)" > STREAK.md
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "GitHub Action"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add STREAK.md
+          git commit -m "Update streak file with current date"
+          git push origin ${{ github.ref }}
         env:
           DEVFUL_GITHUB_TOKEN: ${{ secrets.CSM_GITHUB_TOKEN }}
