@@ -1,0 +1,28 @@
+name: Maintain Commit Streak
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Runs at midnight UTC every day
+  push:
+    branches:
+      - master  # Adjusted to 'master' branch
+
+jobs:
+  commit-streak:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Git
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+    - name: Make a commit
+      run: |
+        echo "Commit made on $(date)" >> commit-streak.txt
+        git add commit-streak.txt
+        git commit -m "Maintaining commit streak: $(date)"
+        git push
