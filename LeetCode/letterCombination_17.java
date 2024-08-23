@@ -25,7 +25,6 @@ public class letterCombination_17 {
             "wxyz"  // 9
         };
 
-        // Initial list with an empty string to start building combinations
         List<String> result = new ArrayList<>();
         result.add("");
         System.out.println("Initial result list: " + result);
