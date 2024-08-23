@@ -25,4 +25,9 @@ jobs:
         echo "Commit made on $(date)" >> commit-streak.txt
         git add commit-streak.txt
         git commit -m "Maintaining commit streak: $(date)"
-        git push
+    
+    - name: Push changes
+      env:
+        GH_PAT: ${{ secrets.GH_PAT }}
+      run: |
+        git push https://x-access-token:${GH_PAT}@github.com/${{ github.repository }}.git HEAD:master
