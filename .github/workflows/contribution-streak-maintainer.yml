@@ -25,7 +25,7 @@ jobs:
           git config user.name "yadavmangesh07"
           git config user.email "mangeshyadav8736@gmail.com"
           git add STREAK.md
-          git commit -m "Update with current date"
+          git commit -m "Update with current date in the streak file"
           git push origin ${{ github.ref }}
         env:
           DEVFUL_GITHUB_TOKEN: ${{ secrets.CSM_GITHUB_TOKEN }}
