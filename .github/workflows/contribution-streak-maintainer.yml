@@ -22,7 +22,7 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config user.name "yadavmangesh07"
+          git config user.name "GitHub Actions"
           git config user.email "mangeshyadav8736@gmail.com"
 
       - name: Pull remote changes
