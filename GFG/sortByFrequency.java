@@ -10,6 +10,7 @@ public class sortByFrequency {
         ArrayList<Integer> ls=new ArrayList<>();
         for(int i=0;i<arr.length;i++){
             hm.put(arr[i],hm.getOrDefault(arr[i],0)+1);
+            
         }
         
         System.out.println(hm);
