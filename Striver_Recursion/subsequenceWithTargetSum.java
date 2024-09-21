@@ -4,10 +4,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class subsequenceWithTargetSum {
+    static int count=0;
     public static void helper(ArrayList<Integer> ls,int target){
         int sum=0;
         ArrayList<Integer> rs=new ArrayList<>();
         subsequence_With_TargetSum(0, sum, target, ls, rs);
+        System.out.println("answer :"+count);
         
 
     }
@@ -15,6 +17,7 @@ public class subsequenceWithTargetSum {
         if(start==ls.size()){
             if(sum==target){
                 System.out.println(rs);
+               count++;
             }
             return;
         }
