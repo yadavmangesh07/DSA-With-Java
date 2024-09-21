@@ -7,12 +7,7 @@ public class subsequenceRecursion {
         ArrayList<ArrayList<Integer>> res=new ArrayList<>();
         ArrayList<Integer> res2=new ArrayList<>();
         helper(res, ls, 0, res2);
-        for (ArrayList<Integer> list : res) {
-            if(list.size()==2){
-                System.out.println(list);
-            }
-            
-        }
+        
 
         return res;
     }
