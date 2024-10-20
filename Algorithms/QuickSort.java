@@ -32,12 +32,51 @@ public class QuickSort {
         return j;
 
     }
+    static void quickSort(int arr[], int low, int high)
+    {
+       if(low<high){
+           int pivotIndex=partition(arr,low,high);
+           quickSort(arr,low,pivotIndex-1);
+           quickSort(arr,pivotIndex+1,high);
+       }
+    }
+    public static void swap(int arr[],int a ,int b){
+        int temp=arr[a];
+        arr[a]=arr[b];
+        arr[b]=temp;
+       
+    }
+    static int partition(int arr[], int low, int high)
+    {
+       int pivot=arr[low];
+       int i=low+1;
+       int j=high;
+       while(i<j){
+           while(arr[i]<=pivot && i<high){
+               i++;
+           }
+           while(arr[j]>pivot && j>=low){
+               j--;
+               
+           }
+           if(i<j){
+               
+           swap(arr,i,j);
+           }
+           
+       }
+       swap(arr,low,j);
+       
+       return j;
+    } 
     public static void main(String[] args) {
-        int arr[]={9,8,3,9,1,6,2,7,4,5};
+        int arr[]={24,18,38,43,14 ,40, 1, 54};
         quickSortFunction(arr, 0, arr.length-1);
         for (int i : arr) {
             System.out.print(i+" ");
         }
+        
+
     }
     
 }
