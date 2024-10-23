@@ -1,4 +1,4 @@
-# 📂 Data Structures and Algorithms with Java
+# 📂 Data Structures & Algorithms with Java
 
 ---
 
