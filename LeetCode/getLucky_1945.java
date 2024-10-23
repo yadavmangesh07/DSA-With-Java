@@ -35,7 +35,7 @@ public class getLucky_1945 {
     }
 
     public static void main(String[] args) {
-        String s = "vbyytoijnbgtyrjlsc";
+        String s = "vbyytoijnbgtyrjlschsfjas";
         System.out.println(getLucky(s, 2));
     }
 
