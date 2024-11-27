@@ -1,4 +1,4 @@
-# 📂 Data Structures and Algorithms with Java
+# 📂 Data Structures & Algorithms with Java
 
 ---
 
@@ -48,7 +48,7 @@ This repository contains a comprehensive collection of Data Structures and Algor
 
 1. **Clone the Repository:**
     ```bash
-    git clone https://github.com/your-username/dsa-with-java.git
+    git clone https://github.com/yadavmangesh07/DSA-With-Java
     cd dsa-with-java
     ```
 
