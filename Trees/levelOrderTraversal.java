@@ -66,10 +66,17 @@ public class levelOrderTraversal {
 
     }
     public static void main(String[] args) {
-        int []arr={7,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
-        binaryTree tree=new binaryTree();
-        Node root=tree.buildBinaryTree(arr);
-        levelTraversal(root);
+        // int []arr={7,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
+        // binaryTree tree=new binaryTree();
+        // Node root=tree.buildBinaryTree(arr);
+        // levelTraversal(root);
+        PriorityQueue<Long> pq=new PriorityQueue<>(Collections.reverseOrder());
+        pq.add(10L);
+        pq.add(20L);
+        pq.add(30L);
+        pq.add(40L);
+        pq.add(50L);
+        System.out.println(pq);
         
     }
     
